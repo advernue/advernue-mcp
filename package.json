@@ -1,0 +1,23 @@
+{
+  "name": "@advernue/mcp",
+  "version": "0.1.0",
+  "description": "MCP server exposing the Advernue unified ads API as tools (stdio)",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "mcp": "./dist/bin.js" },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "spec/openapi.json", "README.md", "LICENSE"],
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --pool=forks --poolOptions.forks.singleFork",
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "pnpm run build"
+  },
+  "repository": { "type": "git", "url": "git+https://github.com/advernue/advernue-mcp.git" },
+  "homepage": "https://github.com/advernue/advernue-mcp#readme",
+  "keywords": ["advernue", "mcp", "model-context-protocol", "ads", "advertising"],
+  "dependencies": { "@advernue/sdk": "file:../advernue-node", "@modelcontextprotocol/sdk": "^1.12.0" },
+  "devDependencies": { "@types/node": "^22.10.0", "typescript": "^5.7.0", "vitest": "^3.0.0" }
+}
