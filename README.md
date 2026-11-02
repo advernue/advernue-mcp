@@ -2,7 +2,7 @@
 
 A stdio [MCP](https://modelcontextprotocol.io) server for the [Advernue](https://advernue.com) API: one request shape over ~200 ad platforms, exposed as tools to any MCP client. Built on [`@advernue/sdk`](https://github.com/advernue/advernue-node).
 
-> **Before publishing:** `package.json` depends on `@advernue/sdk` via `file:../advernue-node`. Switch it to the published semver range once the SDK is on npm, and drop the "Build sibling" step from `.github/workflows/*.yml`.
+> `@advernue/sdk` is installed from GitHub (`github:advernue/advernue-node#main`) until it is on npm; switch to the published semver range then.
 
 ## Use
 

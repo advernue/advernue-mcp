@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@advernue/sdk':
-        specifier: file:../advernue-node
-        version: file:../advernue-node
+        specifier: github:advernue/advernue-node#main
+        version: https://codeload.github.com/advernue/advernue-node/tar.gz/d7e2693e53e896862d9456f4c03b946eabf83040
       '@modelcontextprotocol/sdk':
         specifier: ^1.12.0
         version: 1.32.2(zod@4.6.7)
@@ -27,8 +27,9 @@ importers:
 
 packages:
 
-  '@advernue/sdk@file:../advernue-node':
-    resolution: {directory: ../advernue-node, type: directory}
+  '@advernue/sdk@https://codeload.github.com/advernue/advernue-node/tar.gz/d7e2693e53e896862d9456f4c03b946eabf83040':
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/advernue/advernue-node/tar.gz/d7e2693e53e896862d9456f4c03b946eabf83040}
+    version: 0.1.0
     engines: {node: '>=22'}
 
   '@esbuild/aix-ppc64@0.28.2':
@@ -963,7 +964,7 @@ packages:
 
 snapshots:
 
-  '@advernue/sdk@file:../advernue-node': {}
+  '@advernue/sdk@https://codeload.github.com/advernue/advernue-node/tar.gz/d7e2693e53e896862d9456f4c03b946eabf83040': {}
 
   '@esbuild/aix-ppc64@0.28.2':
     optional: true

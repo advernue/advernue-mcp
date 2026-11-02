@@ -19,12 +19,6 @@ jobs:
           node-version: 24
           registry-url: https://registry.npmjs.org
           cache: pnpm
-      # TEMPORARY: package.json depends on @advernue/sdk via file:../advernue-node.
-      # Remove this step when the dependency is switched to the published semver range.
-      - name: Build sibling @advernue/sdk
-        run: |
-          git clone --depth 1 https://github.com/advernue/advernue-node.git ../advernue-node
-          cd ../advernue-node && pnpm install --frozen-lockfile && pnpm build
       - run: pnpm install --frozen-lockfile
       - run: pnpm typecheck
       - run: pnpm test
